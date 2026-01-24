@@ -1,99 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>OgrenciAsistanAI – Developer Website</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>OgrenciAsistanAI</title>
 
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background-color: #f5f7fa;
-      margin: 0;
-      padding: 0;
-      color: #1c1c1e;
-    }
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+  }
 
-    .container {
-      max-width: 720px;
-      margin: 60px auto;
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
+  .hero {
+    padding: 80px 20px;
+    text-align: center;
+  }
 
-    h1 {
-      margin-top: 0;
-      font-size: 28px;
-    }
+  .hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+  }
 
-    h2 {
-      margin-top: 32px;
-      font-size: 20px;
-    }
+  .hero p {
+    font-size: 18px;
+    color: #cbd5f5;
+    max-width: 640px;
+    margin: 0 auto;
+  }
 
-    p {
-      line-height: 1.6;
-      color: #3a3a3c;
-    }
+  .container {
+    max-width: 960px;
+    margin: -40px auto 60px;
+    padding: 0 20px;
+  }
 
-    a {
-      color: #007aff;
-      text-decoration: none;
-    }
+  .card {
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
+  .card h2 {
+    margin-top: 0;
+    font-size: 22px;
+  }
 
-    footer {
-      margin-top: 40px;
-      font-size: 13px;
-      color: #8e8e93;
-      text-align: center;
-    }
-  </style>
+  .card p {
+    color: #334155;
+    line-height: 1.6;
+  }
+
+  .links a {
+    display: inline-block;
+    margin-right: 16px;
+    margin-top: 10px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .links a.secondary {
+    background: #e5e7eb;
+    color: #1e293b;
+  }
+
+  .links a:hover {
+    opacity: 0.9;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 10px;
+    font-size: 13px;
+    color: #94a3b8;
+  }
+</style>
 </head>
+
 <body>
 
-  <div class="container">
-    <h1>OgrenciAsistanAI</h1>
-    <p>
-      OgrenciAsistanAI is an educational iOS application designed to help students
-      with AI-assisted learning, question solving, and exam preparation.
-    </p>
+<section class="hero">
+  <h1>OgrenciAsistanAI</h1>
+  <p>
+    AI-powered educational assistant for students.
+    Designed to help with question solving, learning support,
+    and exam preparation on iOS.
+  </p>
+</section>
 
-    <h2>Support</h2>
-    <p>
-      For any support or inquiries, please contact:
-      <br/>
-      <strong>houman.heirmand@gmail.com</strong>
-    </p>
+<div class="container">
 
-    <h2>Legal</h2>
-    <ul>
-      <li>
-        <a href="https://dvff9xf76r-commits.github.io/privacy-policy/" target="_blank">
-          Privacy Policy
-        </a>
-      </li>
-    </ul>
-
-    <h2>AdMob</h2>
+  <div class="card">
+    <h2>📱 About the App</h2>
     <p>
-      This application uses Google AdMob for advertising.
+      OgrenciAsistanAI is an educational iOS application that provides
+      AI-assisted solutions for students. The app offers a free mode
+      and optional Pro subscriptions.
     </p>
+  </div>
+
+  <div class="card">
+    <h2>📩 Support</h2>
     <p>
+      For any questions or support requests, please contact:
+      <br /><strong>houman.heirmand@gmail.com</strong>
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>⚖️ Legal</h2>
+    <div class="links">
+      <a href="https://dvff9xf76r-commits.github.io/privacy-policy/" target="_blank">
+        Privacy Policy
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📢 Advertising (AdMob)</h2>
+    <p>
+      This application uses Google AdMob for advertising services.
+    </p>
+    <div class="links">
       <a href="/app-ads.txt" target="_blank">
         View app-ads.txt
       </a>
-    </p>
-
-    <footer>
-      © 2026 Houman Hirmand – OgrenciAsistanAI
-    </footer>
+    </div>
   </div>
+
+</div>
+
+<footer>
+  © 2026 Houman Hirmand – OgrenciAsistanAI
+</footer>
 
 </body>
 </html>

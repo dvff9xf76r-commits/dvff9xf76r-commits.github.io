@@ -1,146 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>OgrenciAsistanAI</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OgrenciAsistanAI – Akıllı Öğrenci Asistanı</title>
 
-<style>
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e293b);
-    color: #f8fafc;
-  }
+  <meta name="description" content="OgrenciAsistanAI, yapay zeka destekli soru çözümü, konu analizi ve öğrenci koçluğu sunan akıllı eğitim uygulamasıdır.">
+  <meta name="author" content="Houman Hirmand">
 
-  .hero {
-    padding: 80px 20px;
-    text-align: center;
-  }
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #6366f1;
+    }
 
-  .hero h1 {
-    font-size: 42px;
-    margin-bottom: 12px;
-  }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
 
-  .hero p {
-    font-size: 18px;
-    color: #cbd5f5;
-    max-width: 640px;
-    margin: 0 auto;
-  }
+    body {
+      background: linear-gradient(180deg, #020617, #0f172a);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-  .container {
-    max-width: 960px;
-    margin: -40px auto 60px;
-    padding: 0 20px;
-  }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
 
-  .card {
-    background: #ffffff;
-    color: #0f172a;
-    border-radius: 16px;
-    padding: 28px;
-    margin-bottom: 24px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-  }
+    header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 80px;
+    }
 
-  .card h2 {
-    margin-top: 0;
-    font-size: 22px;
-  }
+    header h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+    }
 
-  .card p {
-    color: #334155;
-    line-height: 1.6;
-  }
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin: 20px 0;
+    }
 
-  .links a {
-    display: inline-block;
-    margin-right: 16px;
-    margin-top: 10px;
-    padding: 10px 18px;
-    border-radius: 10px;
-    background: #2563eb;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-  }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+    }
 
-  .links a.secondary {
-    background: #e5e7eb;
-    color: #1e293b;
-  }
+    .mockup {
+      background: #020617;
+      border-radius: 30px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #1f2933;
+    }
 
-  .links a:hover {
-    opacity: 0.9;
-  }
+    .mockup img {
+      width: 100%;
+      max-width: 260px;
+    }
 
-  footer {
-    text-align: center;
-    padding: 30px 10px;
-    font-size: 13px;
-    color: #94a3b8;
-  }
-</style>
+    section {
+      margin-bottom: 80px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 24px;
+      border-radius: 20px;
+      border: 1px solid #1f2937;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      border-top: 1px solid #1f2937;
+      padding-top: 30px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: space-between;
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    @media(max-width: 800px) {
+      header {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<section class="hero">
-  <h1>OgrenciAsistanAI</h1>
-  <p>
-    AI-powered educational assistant for students.
-    Designed to help with question solving, learning support,
-    and exam preparation on iOS.
-  </p>
-</section>
+  <div class="container">
 
-<div class="container">
+    <!-- HERO -->
+    <header>
+      <div>
+        <h1>OgrenciAsistanAI</h1>
+        <p>
+          Yapay zeka destekli soru çözümü, konu analizi ve öğrenci koçluğu.
+          Daha hızlı öğren, daha doğru ilerle.
+        </p>
+        <a class="btn" href="#" target="_blank">App Store’da Görüntüle</a>
+      </div>
 
-  <div class="card">
-    <h2>📱 About the App</h2>
-    <p>
-      OgrenciAsistanAI is an educational iOS application that provides
-      AI-assisted solutions for students. The app offers a free mode
-      and optional Pro subscriptions.
-    </p>
+      <div class="mockup">
+        <!-- BURAYA UYGULAMA EKRAN GÖRÜNTÜSÜ GELECEK -->
+        <img src="https://via.placeholder.com/260x520?text=App+Preview" alt="App Preview">
+      </div>
+    </header>
+
+    <!-- FEATURES -->
+    <section>
+      <h2 style="margin-bottom:20px;">Öne Çıkan Özellikler</h2>
+      <div class="features">
+        <div class="card">
+          <h3>📷 Fotoğrafla Soru Çözümü</h3>
+          <p>Sorunun fotoğrafını çek, yapay zeka adım adım çözümü anlatsın.</p>
+        </div>
+
+        <div class="card">
+          <h3>📊 Akıllı Analiz</h3>
+          <p>Zayıf konuları tespit eder, gelişim raporu sunar.</p>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Pro & Ücretsiz Mod</h3>
+          <p>Ücretsiz kullanım + isteğe bağlı Pro abonelik.</p>
+        </div>
+
+        <div class="card">
+          <h3>🔒 Güvenli & Uyumlu</h3>
+          <p>Apple ve AdMob politikalarına %100 uyumludur.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        © 2026 Houman Hirmand – OgrenciAsistanAI
+      </div>
+      <div>
+        <a href="/privacy-policy/">Privacy Policy</a> ·
+        <a href="/support/">Support</a> ·
+        <a href="/app-ads.txt">app-ads.txt</a>
+      </div>
+    </footer>
+
   </div>
-
-  <div class="card">
-    <h2>📩 Support</h2>
-    <p>
-      For any questions or support requests, please contact:
-      <br /><strong>houman.heirmand@gmail.com</strong>
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>⚖️ Legal</h2>
-    <div class="links">
-      <a href="https://dvff9xf76r-commits.github.io/privacy-policy/" target="_blank">
-        Privacy Policy
-      </a>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>📢 Advertising (AdMob)</h2>
-    <p>
-      This application uses Google AdMob for advertising services.
-    </p>
-    <div class="links">
-      <a href="/app-ads.txt" target="_blank">
-        View app-ads.txt
-      </a>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  © 2026 Houman Hirmand – OgrenciAsistanAI
-</footer>
 
 </body>
 </html>
